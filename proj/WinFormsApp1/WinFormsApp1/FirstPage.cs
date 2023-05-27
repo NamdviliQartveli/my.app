@@ -1,23 +1,29 @@
+using First_page;
+
 namespace WinFormsApp1
 {
     public partial class First : Form
     {
+        public static First instance;
         public First()
         {
             InitializeComponent();
+            instance = this;
         }
 
-        private void First_Load(object sender, EventArgs e)
+        private void Register_Click(object sender, EventArgs e)
         {
-
+            Form2 form = new Form2();
+            form.Show();
         }
 
-        private void registerpanel_Paint(object sender, PaintEventArgs e)
+        private void LogIn_Click(object sender, EventArgs e)
         {
-
+            LogInPage logInPage = new LogInPage();
+            logInPage.Show();
         }
 
-        private void RegisterLabel_Click(object sender, EventArgs e)
+        private void GuestBtn_Click(object sender, EventArgs e)
         {
 
         }

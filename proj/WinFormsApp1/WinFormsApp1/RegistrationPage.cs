@@ -7,38 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1;
 
 namespace First_page
 {
     public partial class Form2 : Form
     {
+        public static Form2 instance;
         public Form2()
         {
             InitializeComponent();
+            instance = this;
         }
 
-        private void RePassTextBox_TextChanged(object sender, EventArgs e)
+        private void CompleteBtn_Click(object sender, EventArgs e)
         {
+            if (PassBox.Text != RePassBox.Text)
+            {
+                this.Close();
+            }
+            else if (VerificationBox.Text == "D2EJFH)")
+            {
+                this.Close();
 
-        }
+            }
+            else {
 
-        private void MailTextBox_TextChanged(object sender, EventArgs e)
-        {
+                LogInPage logInPage = new LogInPage();
+                logInPage.Show();
 
-        }
-
-        private void VerCodeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+                LogInPage.instance.mailBox.Text = $"{MailBox.Text}";
+                LogInPage.instance.passBox.Text = $"{PassBox.Text}";
+                this.Close();
+            }
 
         }
     }

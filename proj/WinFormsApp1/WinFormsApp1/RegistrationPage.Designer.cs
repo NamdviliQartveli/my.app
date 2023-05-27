@@ -172,7 +172,7 @@
             this.CompleteBtn.TabIndex = 17;
             this.CompleteBtn.Text = "Complete";
             this.CompleteBtn.UseVisualStyleBackColor = false;
-            this.CompleteBtn.Click += new System.EventHandler(this.button1_Click);
+            this.CompleteBtn.Click += new System.EventHandler(this.CompleteBtn_Click);
             // 
             // Form2
             // 
@@ -197,7 +197,6 @@
             this.MinimumSize = new System.Drawing.Size(300, 480);
             this.Name = "Form2";
             this.Text = "RegistrationPage";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

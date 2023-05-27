@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class First
+     partial class First
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.RegisterSide.SuspendLayout();
             this.registerpanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +84,6 @@
             this.registerpanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.registerpanel.Size = new System.Drawing.Size(872, 100);
             this.registerpanel.TabIndex = 3;
-            this.registerpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.registerpanel_Paint);
             // 
             // LogIn
             // 
@@ -96,6 +96,7 @@
             this.LogIn.TabIndex = 5;
             this.LogIn.Text = "Log in";
             this.LogIn.UseVisualStyleBackColor = false;
+            this.LogIn.Click += new System.EventHandler(this.LogIn_Click);
             // 
             // Register
             // 
@@ -108,6 +109,7 @@
             this.Register.TabIndex = 4;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = false;
+            this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
             // RegisterLabel
             // 
@@ -122,7 +124,6 @@
             this.RegisterLabel.TabIndex = 2;
             this.RegisterLabel.Text = "Register and login to get unlimited re-rolls, plus more profile costomisation.";
             this.RegisterLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RegisterLabel.Click += new System.EventHandler(this.RegisterLabel_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -139,7 +140,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 537);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 536);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // GuestSide
@@ -199,6 +200,7 @@
             this.GuestBtn.TabIndex = 3;
             this.GuestBtn.Text = "Start now";
             this.GuestBtn.UseVisualStyleBackColor = false;
+            this.GuestBtn.Click += new System.EventHandler(this.GuestBtn_Click);
             // 
             // groupBox1
             // 
@@ -251,13 +253,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.ClientSize = new System.Drawing.Size(1008, 560);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1024, 600);
             this.MinimumSize = new System.Drawing.Size(540, 410);
             this.Name = "First";
             this.Text = "first page";
-            this.Load += new System.EventHandler(this.First_Load);
             this.RegisterSide.ResumeLayout(false);
             this.registerpanel.ResumeLayout(false);
             this.registerpanel.PerformLayout();
@@ -287,5 +288,6 @@
         private Button LogIn;
         private Button Register;
         private Button GuestBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

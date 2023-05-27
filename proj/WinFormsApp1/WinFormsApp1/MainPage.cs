@@ -1,4 +1,5 @@
-﻿using System;
+﻿using First_page;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Project
 {
     public partial class MainPage : Form
     {
+        public static MainPage instance;
+
         public MainPage()
         {
             InitializeComponent();
         }
+
+
     }
 }

@@ -46,6 +46,7 @@
             this.LogInBtn.TabIndex = 27;
             this.LogInBtn.Text = "Log in";
             this.LogInBtn.UseVisualStyleBackColor = false;
+            this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
             // 
             // PassBox
             // 
@@ -109,6 +110,8 @@
             this.Controls.Add(this.RePassLabel);
             this.Controls.Add(this.MailBox);
             this.Controls.Add(this.LogInLabel);
+            this.MaximumSize = new System.Drawing.Size(305, 272);
+            this.MinimumSize = new System.Drawing.Size(305, 272);
             this.Name = "LogInPage";
             this.Text = "LogInPage";
             this.ResumeLayout(false);
